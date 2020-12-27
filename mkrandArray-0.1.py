@@ -1,11 +1,17 @@
 #!/usr/bin/python3.7
 
+################################################################################
 #  mkrandArray-0.1.py
+#
 #  @Author: Peter Suchsland
 #  @Date: October 2020
 #
 #  A one liner version of creating a two dimensional array (list of lists) and
 #  populating it with randomly generated characters based on a weight.
+#
+################################################################################
+#  random.choices is a python3.6 and greater feature
+################################################################################
 
 import random
 import copy
@@ -37,15 +43,9 @@ def printArray(ls, x, y):
             print(ls[i][j], end=' '*spaces)
     print("\n~"+"~"*(spaces+1)*(w-1))
 
-###################################################################################
-#  I am not sure random.choices is worth the effort !!!
-#  Sure its great to create a random 2 dimensional array filled with random
-#  characters all in one line but it's only a python3.6 feature and it is confusing.
-#  On the other hand a dynamic array class is not needed.
-###################################################################################
+myMaze = [ [ random.choices(population=[go,nogo],
+    weights=[wghtH, wghtL])[0] for x in range(w)]  for y in range(h) ]
 
-myMaze4 = [ [ random.choices(population=[go,nogo],weights=[wghtH, wghtL])[0] for x in range(w)]  for y in range(h) ]
-
-#cpy = copy.deepcopy(myMaze1)   # Must use copy.deepcopy
-
-printArray(myMaze4, w, h) # Print original array
+cpy = copy.deepcopy(myMaze)   # Must use copy.deepcopy
+printArray(myMaze, w, h) # Print original array
+printArray(cpy, w, h) # Print copy of original array
