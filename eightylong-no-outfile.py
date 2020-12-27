@@ -3,7 +3,7 @@
 import re
 
 fn = open("demofile.txt", "r")
-regex = r"(?P<fullLine>.{70,80}\s)"
+regex = r"(?P<fullLine>.{70,84}\s)"
 subst = "\\g<fullLine>\\n"
 
 for line in fn:

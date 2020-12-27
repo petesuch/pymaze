@@ -1,4 +1,13 @@
 #!/usr/bin/python3.7
+#
+#   eightylong.py
+#
+#   roughly breaks a text file without newlines to about 80 characters
+#   per line.  Useful for breaking up Kindle content so that it is more easily edited
+#   with your favorite editor.
+#
+#   The 70-84 count can be modified to suit your needs.
+
 
 import sys
 import re
@@ -8,7 +17,7 @@ def main(argv):
         inFile = argv[0]
         outFile = argv[1]
     except:
-        print ('catinFile.py <inFile> <outFile')
+        print ('eightylong.py <inFile> <outFile>jj')
         sys.exit(2)
     print ('Arguments Given: ', argv)
     print ('Displaying Contents of: ', inFile)
@@ -21,7 +30,7 @@ def main(argv):
         sys.exit(2)
 
     str = ()
-    regex = r"(?P<fullLine>.{74,88}\s)"
+    regex = r"(?P<fullLine>.{70,84}\s)"
     subst = "\\g<fullLine>\\n"
 
     for line in inF:
@@ -35,4 +44,3 @@ def main(argv):
 
 if __name__ == "__main__":
     main(sys.argv[1:])
-

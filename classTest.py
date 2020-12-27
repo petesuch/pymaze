@@ -1,5 +1,4 @@
-#!/usr/bin/python3
-
+#!/usr/bin/python3.7
 
 class Point:
     def __init__(self, x, y, color):
@@ -17,17 +16,14 @@ class Point:
     def setPointColor(self,color):
         self.color=color
 
-
 class Maze:
     def __init__(self, xsize, ysize):
         self.xsize = xsize
         self.ysize = ysize
         self.numofPoints= self.xsize*self.ysize
-        
 
     def getnumofPoints(self):
         return(self.numofPoints)
-
 
 
 p1 = Point(12,14, "white")
