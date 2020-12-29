@@ -73,11 +73,9 @@ my @cp;
 #####################################################################################################################################################################
 
 
-
-
 @cp = @maze;
 
-my $go="x";
+my $go= "x";
 my $x;
 my $y;
 my $xnew;
@@ -265,7 +263,7 @@ sub addbud()
 {
     $germ= "G$_[0]$_[1]";
     if ( @$germ) {
-         push @$germ, "$_[2],$_[3]";
+        push @$germ, "$_[2],$_[3]";
     }
     else {
         @$germ= ( "$_[2],$_[3]" );
@@ -284,9 +282,9 @@ sub addbranch()
 }
 sub printarray()
 {
-    for  $i ( 0 .. $SZ ) {
+    for $i ( 0 .. $SZ ) {
         for $j (  0 .. $SZ ) {
-                print "$cp[$i][$j] "; # number of spaces here between go chars
+            print "$cp[$i][$j] "; # number of spaces here between go chars
         }
         print "\n";
     }
