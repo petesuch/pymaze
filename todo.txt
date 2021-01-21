@@ -1,0 +1,13 @@
+GUI input for creating maze path with mouse.  User has the option to specify size
+in number of boxes high and number of boxes wide. as well as colors, go vs nogo
+characters, Options for speed, (delay) for display (yes or no).  The program can
+simply state if the puzzle is solvable.
+
+I would like to do testing into my understanding of what is learning and consciousness.
+The seeking and memory aspect of the program is brain like.  Can I have different objects
+for array points?  Can the program learn to deal with different objects?
+Once learned the program can explore an object and save its knowledge to a database.
+
+Humans learn by interacting and experimenting, and observing and recording behaviors.
+So too can this maze.  Perhaps.
+

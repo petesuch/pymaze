@@ -13,22 +13,21 @@
 #  random.choices is a python3.6 and greater feature
 ################################################################################
 
-import random
-import copy
-
-# EDIT THESE FOR ARRAY SIZE
-w = 40     # width
-h = 35     # height
-spaces = 1    # spaces between characters
+###################################################################################
+# EDIT THESE FOR ARRAY SIZE, Window Dimensions, wghtH sets the probability of a
+# particular point being the "go" (vs nogo) character.
+w = 40          # width
+h = 35          # height
+spaces = 1      # spaces between characters
 
 wghtH = 0.65       # EDIT THIS NUMBER for probability of go character
 wghtL=(1-wghtH)    # low middle point
 
-go='\u2629'  # go character
-nogo=' '       # no-go character
+go='\u2629'     # go character
+nogo=' '        # no-go character
 
 """
-Not all unicode characters will print on xterm with utf-8. These do...
+Not all unicode characters will print nicely on xterm with utf-8. These do...
 '\u271a'    #unicode Open Border Greek Cross bolder
 '\u271c'    #unicode Bold Open Center Cross
 '\u2719'    #unicode Open Border Greek Cross
@@ -36,6 +35,9 @@ Not all unicode characters will print on xterm with utf-8. These do...
 '\u2720'    #unicode Maltese Cross
 '\u2629'    #unicode Cross of Jerusalem
 """
+###################################################################################
+import random
+import copy
 
 def printArray(ls, x, y):
     for i in range(y):

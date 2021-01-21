@@ -236,7 +236,7 @@ for $j ( 0 .. $SZ ) {
         printarray();
         #Time::HiRes::sleep(0.5); #.5 seconds
         #Time::HiRes::usleep(1); # 1 microsecond.
-        #sleep 1;
+        sleep 1;
         } # end of while-loop
     } # end of if
 } # end of for
