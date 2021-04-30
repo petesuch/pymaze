@@ -1,28 +1,28 @@
 # pyMazeSolver.py
+
 """
-#   aka: n2.py
+    aka: n2.py
 
-#   A Python version of a mazeSolver
-#   A maze solving program
+    A Python version of a perlMazeSolver.pl
+    A Maze Solving Program
+    Working on: 01/21/2021
 
-#   @author:  Peter A. Suchsland
-#   @Date: Jan 2021
+    @author:  Peter A. Suchsland
+    @Date: Jan 2021
 
-# TODO:
+    TODO:
+    There are still a few bugs with the logic concerning the edges of the array.
+    Later versions will have user supported Mazes as seperate files
 
-#   *   Working on: 01/21/2021
-#   *   A strict tuple structure should be maintained throughout the program:
-#   *   ('G9_12', ((9,11), (8,12), (10,12)))
-#   *   ('G9_12', ((9,11), (8,12), ))
-#   *   ('G9_12', ((9,11),))
+    A strict tuple structure maintained throughout the program:
+    ('G9_12', ((9,11), (8,12), (10,12)))
+    ('G9_12', ((9,11), (8,12), ))
+    ('G9_12', ((9,11),))
 """
 # START
-import sys
-import random
-import copy
-import collections
+import sys, copy, collections
 
-#EDIT THIS to match array to screen
+# EDIT These to match array to terminal window
 w = 40          # width
 h = 40          # height
 spaces = 1      # spaces between characters for printing to screen
@@ -81,7 +81,7 @@ maze = (
 # A copy is used for manipulation
 cp = copy.deepcopy(maze)    # Must use copy.deepcopy
 
-DONE = False; SOLVED = False
+DONE,SOLVED = False,False
 x = ""; y = ""; xp = ""; yp = ""
 germdict = collections.OrderedDict() # dictionary
 germ = ''; i=j=0
@@ -107,7 +107,7 @@ def printVariables():
 def te(t):
     lst=[]
     newlst =[]
-    def re(t): ### recursive expand
+    def re(t): # Recursive expansion
         for element in t:
             if isinstance(element, tuple) :
                 re(element)
@@ -120,7 +120,6 @@ def te(t):
     #print("After Tuple Expansion: ")
     for i in range(len):
         newlst.append( (lst[2*i],lst[2*i+1]) )
-
     return(tuple(newlst))
 
 #
@@ -156,7 +155,7 @@ for j in range(w):
     if (cp[0][j] == go ):
         if ( SOLVED ):
             break
-        print ("*****************************************************************")
+        print ("**************************************************************")
         print ("Entering Maze at: 0,", i )
         DONE = False; xentry = j; yentry = 0; x = xentry; y = yentry;
 
@@ -202,8 +201,8 @@ for j in range(w):
                 pass
 
             ### There Yet?
-            try:
-                if ( ( cp[yup][xup] >= go) and (yup >= SZ-1 ) ) :  # if yup is a go and the last
+            try:    # yup is the last go
+                 if ( ( cp[yup][xup] >= go) and (yup >= SZ-1 ) ) :
                     SOLVED = True; DONE = True
                     cp[yup][xup] = mark # if its there mark it
                     break
@@ -237,7 +236,7 @@ for j in range(w):
 
             printVariables()
             printArray(cp,w,h)
-            print ("# Loop End ##################################################")
+            print ("# Loop End ###############################################")
 
 if SOLVED:
     print ("*****  MAZE SOLVED  *******************************")

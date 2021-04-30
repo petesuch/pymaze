@@ -1,0 +1,13 @@
+git add .
+git add file file file
+git status
+git commit -m "minor edits blah blah"
+git branch -M main
+git remote add origin 'https://github.com/petesuch/pymaze'
+git clone 'https://github.com/petesuch/pymaze'
+git push -u origin main
+git status
+git rm file file file
+git mv file newfile
+git status
+git push
