@@ -1,23 +1,18 @@
 #!/usr/bin/python3.8
 
-#   PYTHON VERSION
+#   PYTHON VERSION of mazeSolver
+#   A maze solving program
 #
 #   n2.py
 #
-#   WORKING and NOT FINISHED
-#
 #   @author:  Peter A. Suchsland
 #   @Date: Jan 2021
-#   A maze solving program
 
 ###################################################################################
 # TODO:
 #
-#   *    Got it working on January 21st 2021: 01/21/2021
-#
-#   *   Closer inspection of germdict and the tuples it contains.
+#   *   Working on: 01/21/2021
 #   *   A strict tuple structure should be maintained throughout the program:
-#
 #   *   ('G9_12', ((9,11), (8,12), (10,12)))
 #   *   ('G9_12', ((9,11), (8,12), ))
 #   *   ('G9_12', ((9,11),))
