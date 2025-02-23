@@ -22,7 +22,7 @@ science and was interested in how, say  bars of steel or aluminum, became fractu
 I worked on a version using the Pascal programming language on the legendary
 VAX mainframe.
 
-The pascal version unfortunately never worked for me and I suppose out of guilt.
+The Pascal version unfortunately never worked for me and I suppose out of guilt.
 I decided to, many years later, resurrect the project and work with the tools I
 had on hand.  In the early 2000's I had my first laptop, a Chembook that I
 eventually installed FreeBSD on with the Perl interpreter. I also had a copy of
@@ -33,5 +33,9 @@ It had always been my goal to learn other languages, so Python was the next logi
 step.
 
 Ultimately the goal is not only to get from one side to another but to learn.
-~
+A few minor issues exist with this code and those are end of array issues where there are 
+checks in place to make sure a "+" is not at (end of array + 1) or (beginning of array -1).
+
+In this example code I avoid this problem by making the path not too close to the edges.  
+
 
